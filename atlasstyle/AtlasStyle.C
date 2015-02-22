@@ -23,6 +23,9 @@ TStyle* AtlasStyle()
 
   // use plain black on white colors
   Int_t icol=0; // WHITE
+
+  atlasStyle->SetPalette(1);
+
   atlasStyle->SetFrameBorderMode(icol);
   atlasStyle->SetFrameFillColor(icol);
   atlasStyle->SetCanvasBorderMode(icol);
@@ -37,7 +40,7 @@ TStyle* AtlasStyle()
 
   // set margin sizes
   atlasStyle->SetPadTopMargin(0.05);
-  atlasStyle->SetPadRightMargin(0.05);
+  atlasStyle->SetPadRightMargin(0.15);
   atlasStyle->SetPadBottomMargin(0.16);
   atlasStyle->SetPadLeftMargin(0.16);
 
