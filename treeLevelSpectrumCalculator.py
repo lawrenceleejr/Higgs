@@ -7,13 +7,15 @@ import math
 
 MZ       = 91.154
 MW       = 80.370
-MTAU     = 1.77
+MTAU     = 1.776
 MMUON    = 0.105658367
 
-
+#NNLO Pole Masses from HDECAY
 MC       = 1.64
 MB       = 4.87
 MT       = 177.1
+
+
 
 GF = 0.000011663
 
@@ -35,7 +37,7 @@ ALPHAS = 0.118
 
 
 # VARRAY = [0.05*x for x in xrange(1,200) ]
-VARRAY = [0.01*x for x in xrange(1,200) ]
+VARRAY = [0.05*x for x in xrange(1,200) ]
 
 # print "V,MZ,MW,MC,MB,MT,MTAU,MMUON,GF"
 # for V in VARRAY:
@@ -64,7 +66,7 @@ for V in VARRAY:
 		MT*V,
 		MTAU*V,
 		MMUON*V,
-		(1/V**2)*GF,
+		(1/V**2)*GF, ## Should there also be a (1/math.sqrt(2) )?
 		GAMW*V,
 		GAMZ*V,
 		 1./( (1./ALPHAS)+(1./(2.*np.pi))*(-23./3.)*math.log(1./V) )
